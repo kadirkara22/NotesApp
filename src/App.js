@@ -1,12 +1,12 @@
 import './App.css';
-import NoteContent from './components/noteContent/NoteContent';
+import NoteList from './components/noteContent/NoteList';
 import NoteTile from './components/noteTitle/NoteTile';
 
 function App() {
   return (
     <div className="app">
       <NoteTile />
-      <NoteContent />
+      <NoteList />
     </div>
   );
 }
