@@ -1,0 +1,17 @@
+.noteTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header {
+  color: #d46e58;
+}
+.fa-plus-circle {
+  color: #71cbd0;
+  cursor: pointer;
+}
+.fa-plus-circle:hover {
+  color: #31b1b8;
+}

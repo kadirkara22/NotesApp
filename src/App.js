@@ -4,7 +4,7 @@ import NoteTile from './components/noteTitle/NoteTile';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <NoteTile />
       <NoteContent />
     </div>
