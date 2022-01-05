@@ -1,6 +1,14 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteNote } from '../../redux/notesSlice';
 import "./noteContent.css"
 const NoteHeader = () => {
+    const dispatch = useDispatch();
+    const notesArray = useSelector(state => state.notes.notesArray)
+    const handleClickDelete = () => {
+        dispatch(deleteNote())
+    }
+    console.log(notesArray[0])
     return (
 
         <div className="noteHeader">
@@ -8,7 +16,7 @@ const NoteHeader = () => {
             <span className="icons">
                 <i className="fa fa-check fa-lg" ng-if="note.edit == false"></i>
                 <i className="fa fa-pencil fa-lg" ng-if="note.edit == true"></i>
-                <i className="fa fa-trash-o fa-lg" ng-click="delete(notes.length - $index - 1)"></i></span>
+                <i className="fa fa-trash-o fa-lg" onClick={() => handleClickDelete()}></i></span>
         </div>
 
     )

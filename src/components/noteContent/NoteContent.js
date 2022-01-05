@@ -12,7 +12,7 @@ const NoteContent = () => {
             <div className="markdown-body" ng-model="note.text"
                 ng-change="update(notes.length - $index - 1,note.text)"
                 ng-focus="note.edit = true" ng-blur="note.edit = false"
-                markdown-editable contenteditable="true">{/* {{ note.text }} */}</div>
+                /* markdown-editable contenteditable="true" */>{/* {{ note.text }} */}</div>
         </div>
 
 
