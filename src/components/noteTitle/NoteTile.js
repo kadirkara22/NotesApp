@@ -7,6 +7,7 @@ const NoteTile = () => {
 
     const dispatch = useDispatch();
     const handleCreateNewNote = () => {
+
         dispatch(addNotes())
     }
 

@@ -1,24 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 export const notesSlice = createSlice({
     name: "notes",
     initialState: {
-        notesCount: 1,
-        notesArray: [
-
-        ]
+        notesArray: [],
 
     },
     reducers: {
         addNotes: (state, action) => {
-            state.notesArray = [...Array(state.notesCount).keys()];
-            state.notesCount += 1;
-
-
+            const newNote = {
+                id: nanoid(),
+            }
+            state.notesArray = [...state.notesArray, newNote]
         },
         deleteNote: (state, action) => {
-            const note = action.payload
-
+            const id = action.payload
+            state.notesArray = state.notesArray.filter(item => item.id !== id)
         }
 
     }

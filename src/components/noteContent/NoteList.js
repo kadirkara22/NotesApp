@@ -8,8 +8,8 @@ const NoteList = () => {
     return (
         <div className="noteContainer">
             {
-                notesArray.map((item, i) => {
-                    return <NoteContent key={notesArray[i]} />
+                notesArray.map((item, index) => {
+                    return <NoteContent key={index} id={item.id} />
                 })
             }
         </div>
