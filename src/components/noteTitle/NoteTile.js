@@ -1,14 +1,21 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { addNotes } from '../../redux/notesSlice';
+import { useDispatch, useSelector } from 'react-redux'
+import { addDate, addNotes } from '../../redux/notesSlice';
+import dateFormat, { masks } from "dateformat";
 import "./noteTitle.css"
+import { nanoid } from '@reduxjs/toolkit';
 
 const NoteTile = () => {
-
     const dispatch = useDispatch();
     const handleCreateNewNote = () => {
+        var now = new Date();
+        dateFormat(now);
+        var newNow = now.toString()
+        var id = nanoid();
 
-        dispatch(addNotes())
+        dispatch(addNotes({ id, newNow }))
+
+
     }
 
     return (

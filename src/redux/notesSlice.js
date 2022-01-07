@@ -8,8 +8,10 @@ export const notesSlice = createSlice({
     },
     reducers: {
         addNotes: (state, action) => {
+            const notes = action.payload
             const newNote = {
-                id: nanoid(),
+                id: notes.id,
+                date: notes.newNow.slice(0, 24)
             }
             state.notesArray = [...state.notesArray, newNote]
         },

@@ -9,7 +9,7 @@ const NoteList = () => {
         <div className="noteContainer">
             {
                 notesArray.map((item, index) => {
-                    return <NoteContent key={index} id={item.id} />
+                    return <NoteContent key={index} id={item.id} date={item.date} />
                 })
             }
         </div>
