@@ -6,11 +6,12 @@ import "./noteContent.css"
 const NoteHeader = ({ id, date }) => {
     const dispatch = useDispatch();
     const notesArray = useSelector(state => state.notes.notesArray)
+    const text = useSelector(state => state.notes.text)
     const handleClickDelete = (id) => {
         dispatch(deleteNote(id))
     }
-    //var dateFormat = require('dateformat');
 
+    console.log(text)
 
     return (
 

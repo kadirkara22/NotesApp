@@ -12,8 +12,8 @@ const NoteTile = () => {
         dateFormat(now);
         var newNow = now.toString()
         var id = nanoid();
-
-        dispatch(addNotes({ id, newNow }))
+        var text = ""
+        dispatch(addNotes({ id, newNow, text }))
 
 
     }

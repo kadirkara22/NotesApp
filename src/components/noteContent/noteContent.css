@@ -47,3 +47,28 @@
   justify-content: space-between;
   background-color: #eee;
 }
+.textareaNotes {
+  min-height: 200px;
+  resize: none;
+  border: none;
+}
+.textareaNotes:focus {
+  outline: none;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  float: right;
+  cursor: pointer;
+  margin: 5px 5px;
+  color: #fdfdfd;
+  background-color: green;
+  border: none;
+  width: 46px;
+  height: 25px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
