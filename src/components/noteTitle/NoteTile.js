@@ -1,7 +1,7 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { addDate, addNotes } from '../../redux/notesSlice';
-import dateFormat, { masks } from "dateformat";
+import { useDispatch } from 'react-redux'
+import { addNotes } from '../../redux/notesSlice';
+import dateFormat from "dateformat";
 import "./noteTitle.css"
 import { nanoid } from '@reduxjs/toolkit';
 
